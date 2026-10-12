@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080b14">
+<meta name="description" content="MUSLIM MOVIES — films gratuits et vidéos légalement disponibles.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+<title>MUSLIM MOVIES</title>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./" aria-label="MUSLIM MOVIES accueil"><span class="brand-mark">M</span><span>MUSLIM <b>MOVIES</b></span></a>
+  <button id="installBtn" class="install hidden">Installer</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">TON CINÉMA, PARTOUT</span>
+      <h1>Des histoires.<br><span>Sans limites.</span></h1>
+      <p>Découvre des films, courts-métrages et vidéos gratuits disponibles légalement.</p>
+      <a class="primary-btn" href="#catalogue">Explorer le catalogue <span>→</span></a>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="play">▶</div><div class="filmstrip">M · M · M</div></div>
+  </section>
+  <section class="tools" aria-label="Recherche et filtres">
+    <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Rechercher un film, un genre..." autocomplete="off"></label>
+    <div id="filters" class="filters">
+      <button class="filter active" data-category="Tous">Tout</button>
+      <button class="filter" data-category="Action">Action</button>
+      <button class="filter" data-category="Aventure">Aventure</button>
+      <button class="filter" data-category="Animation">Animation</button>
+      <button class="filter" data-category="Documentaire">Documentaire</button>
+      <button class="filter" data-category="Classique">Classiques</button>
+    </div>
+  </section>
+  <section id="catalogue" class="section">
+    <div class="section-heading"><div><span class="eyebrow">À DÉCOUVRIR</span><h2>Le catalogue</h2></div><span id="count" class="count"></span></div>
+    <div id="grid" class="grid"></div>
+    <p id="empty" class="empty hidden">Aucun résultat. Essaie un autre mot-clé.</p>
+  </section>
+  <section class="legal">
+    <div class="legal-icon">▶</div><div><h3>Des vidéos accessibles légalement</h3><p>Les fiches de démonstration ouvrent une recherche sur Internet Archive. Vérifie la licence et les conditions de chaque vidéo avant de la partager ou de l’intégrer.</p><a href="https://archive.org/details/movies" target="_blank" rel="noopener">Explorer les films sur Internet Archive ↗</a></div>
+  </section>
+</main>
+<footer><a class="brand small" href="./"><span class="brand-mark">M</span><span>MUSLIM <b>MOVIES</b></span></a><p>© <span id="year"></span> MUSLIM MOVIES · Projet indépendant</p><p class="fine">Les titres de démonstration sont des recherches de catalogue, pas une promesse de disponibilité ni de droits de diffusion.</p></footer>
+<dialog id="details">
+  <button class="close" id="closeDialog" aria-label="Fermer">×</button>
+  <div id="dialogPoster" class="dialog-poster"></div>
+  <div class="dialog-copy"><span id="dialogCategory" class="eyebrow"></span><h2 id="dialogTitle"></h2><p id="dialogDescription"></p><a id="watchLink" class="primary-btn" target="_blank" rel="noopener">Trouver une vidéo autorisée ↗</a><p class="fine">Avant toute diffusion, consulte la licence affichée par la source. Certains contenus peuvent être géo-restreints ou soumis à des conditions particulières.</p></div>
+</dialog>
+<script src="./app.js"></script>
+</body>
+</html>
