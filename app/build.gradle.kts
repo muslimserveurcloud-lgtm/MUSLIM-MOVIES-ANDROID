@@ -15,3 +15,9 @@ android {
         versionName = "1.0"
     }
 }
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
